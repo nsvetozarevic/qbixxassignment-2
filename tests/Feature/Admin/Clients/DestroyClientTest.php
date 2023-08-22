@@ -14,7 +14,7 @@ class DestroyClientTest extends FeatureTest
     /**
      * @test
      */
-    public function a_guest_can_delete_a_client(): void
+    public function aGuestCanDeleteAClient(): void
     {
         $client = Client::factory()->create();
         Item::factory(3)->create([

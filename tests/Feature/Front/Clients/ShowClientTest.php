@@ -14,7 +14,7 @@ class ShowClientTest extends FeatureTest
     /**
      * @test
      */
-    public function a_guest_can_view_a_client_details_in_all_languages(): void
+    public function aGuestCanViewAClientDetailsInAllLanguages(): void
     {
         $client = Client::factory()->create();
         Item::factory(3)->create([

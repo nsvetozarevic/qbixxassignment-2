@@ -25,7 +25,7 @@ class UpdateClient extends Controller
         Item::where('client_id', $client->id)->delete();
 
         // Add new items
-        $client->items()->saveMany(array_map(fn($item) => new Item($item), $request->safe(['items'])['items']));
+        $client->items()->saveMany(array_map(fn ($item) => new Item($item), $request->safe(['items'])['items']));
 
         return redirect()->route(RoutesEnum::ADMIN_INDEX_CLIENTS);
     }

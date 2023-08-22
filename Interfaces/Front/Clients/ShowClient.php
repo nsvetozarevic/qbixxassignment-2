@@ -18,7 +18,7 @@ class ShowClient extends Controller
             'client' => [
                 'name' => $client->name,
             ],
-            'items' => $client->items()->get()->map(fn($item) => [
+            'items' => $client->items()->get()->map(fn ($item) => [
                 'type' => $item->type,
                 'title' => $item->title,
                 'paragraph' => $item->paragraph,

@@ -14,7 +14,7 @@ class UpdateClientTest extends FeatureTest
     /**
      * @test
      */
-    public function a_guest_can_update_a_client(): void
+    public function aGuestCanUpdateAClient(): void
     {
         $client = Client::factory()->create();
         Item::factory(3)->create([
@@ -52,7 +52,7 @@ class UpdateClientTest extends FeatureTest
      *
      * @dataProvider invalidData
      */
-    public function a_guest_can_not_update_a_client_with_invalid_data(string $columnName, string $value): void
+    public function aGuestCanNotUpdateAClientWithInvalidData(string $columnName, string $value): void
     {
         $client = Client::factory()->create();
         Item::factory(3)->create([
@@ -81,7 +81,7 @@ class UpdateClientTest extends FeatureTest
      *
      * @dataProvider invalidItemData
      */
-    public function a_guest_can_not_update_a_client_items_with_invalid_data(string $columnName, $value, string $sessionName): void
+    public function aGuestCanNotUpdateAClientItemsWithInvalidData(string $columnName, $value, string $sessionName): void
     {
         $client = Client::factory()->create();
         Item::factory(3)->create([

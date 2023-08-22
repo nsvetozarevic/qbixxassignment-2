@@ -22,7 +22,7 @@ class EditClient extends Controller
                 'id' => $client->id,
                 'name' => $client->name,
             ],
-            'items' => $client->items()->get()->map(fn($item) => [
+            'items' => $client->items()->get()->map(fn ($item) => [
                 'type' => $item->type,
                 'title' => $item->getTranslations('title'),
                 'paragraph' => $item->getTranslations('paragraph'),

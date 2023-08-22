@@ -14,7 +14,7 @@ class ClientSeeder extends Seeder
     {
         Client::factory(5)
             ->has(Item::factory(3, function () {
-                return config('data.items')[rand(0, 2)];
+                return config('data.items')[random_int(0, 2)];
             }))
             ->create();
     }

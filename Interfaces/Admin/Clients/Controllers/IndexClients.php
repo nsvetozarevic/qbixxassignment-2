@@ -15,10 +15,10 @@ class IndexClients extends Controller
     {
         // For security reasons, we do not send all client data to the frontend
         return Inertia::render('Admin/Clients/Index', [
-            'clients' => Client::all()->map(fn($client) => [
+            'clients' => Client::all()->map(fn ($client) => [
                 'id' => $client->id,
                 'name' => $client->name,
-            ])
+            ]),
         ]);
     }
 }

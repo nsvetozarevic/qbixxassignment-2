@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Domain\Clients\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,12 +10,13 @@ use Spatie\Translatable\HasTranslations;
 
 class Item extends Model
 {
-    use HasFactory, HasTranslations;
+    use HasFactory;
+    use HasTranslations;
 
-    const TYPE_WISDOM = 'wisdom';
-    const TYPE_PHILOSOPHY = 'philosophy';
-    const TYPE_DESIGN = 'design';
-    const ALLOWED_TYPES = [
+    public const TYPE_WISDOM = 'wisdom';
+    public const TYPE_PHILOSOPHY = 'philosophy';
+    public const TYPE_DESIGN = 'design';
+    public const ALLOWED_TYPES = [
         self::TYPE_WISDOM,
         self::TYPE_PHILOSOPHY,
         self::TYPE_DESIGN,
