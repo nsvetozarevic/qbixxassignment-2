@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\File;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -35,7 +37,16 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        $locale = App::getLocale();
+
+        $translations = [];
+
+        if (File::exists(base_path('lang/'.$locale.'.json'))) {
+            $translations = json_decode(File::get(base_path('lang/'.$locale.'.json')), true);
+        }
+
         return array_merge(parent::share($request), [
+            'translations' => $translations,
         ]);
     }
 }

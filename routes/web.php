@@ -9,6 +9,7 @@ use Interfaces\Admin\Clients\Controllers\EditClient;
 use Interfaces\Admin\Clients\Controllers\IndexClients;
 use Interfaces\Admin\Clients\Controllers\StoreClient;
 use Interfaces\Admin\Clients\Controllers\UpdateClient;
+use Interfaces\Front\Clients\ShowClient;
 use Interfaces\Front\Landing\WelcomeController;
 
 /*
@@ -29,3 +30,4 @@ Route::post('admin/clients/create', StoreClient::class)->name(RoutesEnum::ADMIN_
 Route::get('admin/clients/{client}/edit', EditClient::class)->name(RoutesEnum::ADMIN_EDIT_CLIENT);
 Route::put('admin/clients/{client}/update', UpdateClient::class)->name(RoutesEnum::ADMIN_UPDATE_CLIENT);
 Route::delete('admin/clients/{client}/destroy', DestroyClient::class)->name(RoutesEnum::ADMIN_DESTROY_CLIENT);
+Route::get('front/clients/{client}', ShowClient::class)->name(RoutesEnum::FRONT_SHOW_CLIENT);

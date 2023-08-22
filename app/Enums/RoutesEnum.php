@@ -14,6 +14,11 @@ class RoutesEnum
     /**
      * @string
      */
+    public const FRONT_SHOW_CLIENT = 'front.clients.show';
+
+    /**
+     * @string
+     */
     public const ADMIN_INDEX_CLIENTS = 'admin.clients.index';
 
     /**
