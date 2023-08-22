@@ -109,6 +109,32 @@ return [
     |
     */
 
+    /*
+    |--------------------------------------------------------------------------
+    | Application Available Locales
+    |--------------------------------------------------------------------------
+    |
+    | The application locales that we can switch between.
+    |
+    */
+
+    'locales' => ['en', 'nl', 'fr'],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Application Available Locales
+    |--------------------------------------------------------------------------
+    |
+    | The application locales that we can switch between.
+    |
+    */
+
+    'named_locales' => [
+        'en' => 'English',
+        'nl' => 'Dutch',
+        'fr' => 'Français',
+    ],
+
     'faker_locale' => 'en_US',
 
     /*

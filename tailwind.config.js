@@ -23,10 +23,22 @@ module.exports = {
                     '"Segoe UI Symbol"',
                     '"Noto Color Emoji"',
                 ],
+                montserrat: [
+                    'Montserrat',
+                    'sans-serif',
+                ],
+            },
+            colors: {
+                'custom-gray': '#575F65',
+                'custom-blue': '#249EEA',
+            },
+            fontSize: {
+                '50px': ['50px', 1],
             },
         },
     },
     plugins: [
         require('tw-elements/dist/plugin'),
+        require('@tailwindcss/line-clamp'),
     ],
 }
