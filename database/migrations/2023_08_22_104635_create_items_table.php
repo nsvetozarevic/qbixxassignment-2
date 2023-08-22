@@ -18,8 +18,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('client_id')->constrained()->cascadeOnDelete();
             $table->enum('type', Item::ALLOWED_TYPES);
-            $table->string('title');
-            $table->mediumText('paragraph');
+            $table->json('title');
+            $table->json('paragraph');
             $table->timestamps();
         });
     }

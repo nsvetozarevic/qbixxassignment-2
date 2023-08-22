@@ -12,6 +12,10 @@ class ClientSeeder extends Seeder
 {
     public function run(): void
     {
-        Client::factory(5)->has(Item::factory(3))->create();
+        Client::factory(5)
+            ->has(Item::factory(3, function () {
+                return config('data.items')[rand(0, 2)];
+            }))
+            ->create();
     }
 }

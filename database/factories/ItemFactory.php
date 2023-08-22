@@ -26,8 +26,16 @@ class ItemFactory extends Factory
         return [
             'client_id' => Client::factory(),
             'type' => $this->faker->randomElement(Item::ALLOWED_TYPES),
-            'title' => $this->faker->text(),
-            'paragraph' => $this->faker->paragraph(),
+            'title' => [
+                'en' => $this->faker->text(),
+                'nl' => $this->faker->text(),
+                'fr' => $this->faker->text(),
+            ],
+            'paragraph' => [
+                'en' => $this->faker->paragraph(),
+                'nl' => $this->faker->paragraph(),
+                'fr' => $this->faker->paragraph(),
+            ],
         ];
     }
 }
