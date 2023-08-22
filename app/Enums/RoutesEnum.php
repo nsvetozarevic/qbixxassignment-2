@@ -35,4 +35,9 @@ class RoutesEnum
      * @string
      */
     public const ADMIN_UPDATE_CLIENT = 'admin.clients.update';
+
+    /**
+     * @string
+     */
+    public const ADMIN_DESTROY_CLIENT = 'admin.clients.destroy';
 }
