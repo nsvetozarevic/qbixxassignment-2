@@ -8,7 +8,7 @@ use Domain\Clients\Models\Client;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Domain\Clients\Models>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Domain\Clients\Models\Client>
  */
 class ClientFactory extends Factory
 {
